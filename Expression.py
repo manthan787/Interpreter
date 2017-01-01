@@ -6,7 +6,6 @@ class SimpleExpression:
 		"""
 			Here operands are INT tokens 
 			and operator is a token one of [+, -, *, /]
-
 		"""
 		self.operand1 = operand1
 		self.operator = operator
