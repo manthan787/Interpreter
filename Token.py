@@ -3,6 +3,8 @@ class TokenType:
 	INTEGER = "INT"
 	PLUS = "PLUS"
 	MINUS = "MINUS"
+	MUL = "MUL"
+	DIV = "DIV"
 	EOF = "EOF"
 
 
