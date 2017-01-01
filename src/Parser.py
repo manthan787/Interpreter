@@ -50,6 +50,9 @@ class Parser:
 
 
 	def get_next_token(self):
+		"""
+			Get the next token from the text stream
+		"""
 		current_char = self.get_next_char()		
 		
 		int_buffer = ''
@@ -70,6 +73,10 @@ class Parser:
 	def isoperator(self, char):
 		"""
 		Return true if the given character is a supported operator
+
+		char: A character
+
+		Returns: True if the character is in the operator type mappings
 		"""		
 		return char in TokenType.OPERATOR_TYPE_MAPPINGS
 	
@@ -92,6 +99,12 @@ class Parser:
 	def verify(self, token, types):
 		"""
 			Verify whether the token is of the expected type
+
+			token: A token to be verified
+			types: A list of types the given token should be of
+
+			Returns: True if the token type is within the types
+					 given
 		"""	
 		if token.type not in types:
 			raise Exception("Unexpected Token")
@@ -110,4 +123,3 @@ def test():
 
 if __name__ == '__main__':
 	test()
-
