@@ -1,5 +1,5 @@
 from Token import TokenType
-from Token import Token
+from Token import Token, get_operator_type
 from Expression import SimpleExpression
 
 
@@ -11,9 +11,7 @@ class Parser:
 		self.text = text
 		""" the pointer pointing at a character in the given text """
 		self.pointer = 0	
-		""" most recently identified token """			 
-		self.current_token = None
-	
+		
 
 	def parse(self):
 		"""	
@@ -67,7 +65,7 @@ class Parser:
 
         if self.isoperator(current_char):
             return Token(PLUS, current_char)            
-    
+
 
     def get_next_char(self):    	
     	if self.pointer > len(self.text) - 1:
@@ -85,6 +83,7 @@ class Parser:
 		"""
 		if token.type not in types:
 			raise Exception("Unexpected Token")
+
 
 def test():
 	parser = Parser("3 + 5")
