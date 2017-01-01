@@ -21,7 +21,7 @@ class Parser:
 			3) Solves it
 		"""
 		expression = self.construct_expression()
-		return expression.solve()
+		return expression
 
 
 	def construct_expression(self):

@@ -7,7 +7,8 @@ class Interpreter:
 
 
 	def interpret(self):
-		return self.parser.parse()
+		expr = self.parser.parse()
+		return expr.solve()
 
 
 if __name__ == '__main__':
