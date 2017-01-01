@@ -13,6 +13,9 @@ class SimpleExpression:
 
 
 	def solve(self):
+		"""
+			Solve the given Simple Expression
+		"""
 		operator_mappings = {'PLUS': operator.add, 
 							 'MINUS': operator.sub,
 							 'MUL': operator.mul,

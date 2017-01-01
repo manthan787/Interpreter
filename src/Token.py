@@ -25,5 +25,11 @@ class Token:
 
 
 # Module methods
-def get_operator_type(op):	
+def get_operator_type(op):
+	"""
+		Returns the TokenType of the given operator character
+		op: A character depicting an operator
+
+		Returns: The type value for the given operator
+	"""
 	return TokenType.OPERATOR_TYPE_MAPPINGS[op]
